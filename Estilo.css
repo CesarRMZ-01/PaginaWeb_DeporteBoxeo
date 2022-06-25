@@ -1,0 +1,986 @@
+﻿/*
+@font-face {
+    font-family: "STR";
+    src: url("Assets/Octarine-Light.otf");
+}
+*/
+html,body {
+    height: 100%;
+    width: 100%;
+    margin: 0;
+    padding: 0;
+}
+
+*{
+    font-size: small;
+    text-transform: uppercase;
+    text-decoration: none;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+}
+
+
+/*------------Encabezado--------------*/
+.Encabezado
+{
+    
+    background: linear-gradient(#1a0e0e 60%, ghostwhite 40%) no-repeat;
+    display: grid;
+    grid-template-rows:60% 40%;
+    grid-template-columns: 10% 70% 20%;
+    top:0;
+    width: 100%;
+    position:fixed;        
+    height: auto;
+
+}
+.Logo
+{
+    grid-column: 1;
+    grid-row: 1;
+    height: auto;
+    margin: 5%;
+    width: 100%;
+    align-self:center;
+}
+
+.Logo > img
+{
+    height: 5%;
+    margin: 0;
+    width: 60%;
+    object-fit:fill;
+    object-position: center;
+    align-self:center;
+    
+}
+.Logo > img:hover
+{
+    cursor: pointer;
+}
+
+/*Encabezado Nav*/
+body nav
+{   
+    grid-column: 2;
+    grid-row: 1;
+    color: #fff;
+    margin: auto;
+    padding: 0 0 0 15%;
+    justify-content: space-around;
+}
+
+.Encabezado > div
+{
+    display: grid;
+    grid-template-columns: 70% 30%;
+    column-gap: 10%;
+    margin: auto;
+}
+
+/*Carrito de compra*/
+.Logo_carrito > h1{
+    font-size: x-large;
+    margin: 0%;
+}
+.Logo_carrito >h1:hover
+{
+    text-shadow: 1px 1px 5px #fff;
+
+}
+.Logo_carrito
+{
+    margin-bottom: 5%;
+}
+
+
+/*Barra de Navegación*/
+body nav a
+{
+    margin: 0 10px;
+    color: #fff;
+}
+body nav a:hover
+{
+    transition: .05s;
+
+    padding: 2px 2px;
+    box-sizing: border-box;
+    border: 1px solid #fff;
+    border-width: 1.5px;
+    border-style:groove;
+    border-radius: 10%;
+
+    font-size: 14px;
+
+    margin: 0 4px;
+    text-decoration:underline;
+    color: #fff;
+    
+}
+
+
+
+
+/*Encabezado Oferta*/
+body header h2{
+    margin: auto;
+    text-align: center;
+    grid-row: 2;
+    grid-column: 1 / span 3;
+    color: #1a0e0e;
+}
+
+
+
+
+/*--------------Foto Presentación--------------*/
+.Img_Fondo_Main img
+{
+    background-color: #1a0e0e;
+    height: 600px; 
+    width: 100%;
+    object-fit:contain;
+    object-position: top center;
+    margin: 50px 0 0 0;
+}
+
+.Articulos{
+    padding:0 10%;
+}
+
+
+/*---------------Main-------------------*/
+
+/*Main Fondo*/
+.Main
+{
+    background-image:url("Assets/DBG.jpg") ;
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+/*Main contenido*/
+.Main div
+{
+    display: grid;
+    grid-template-columns: 30% 30% 30%;
+    grid-row: 20% 60% 20%;
+    justify-content: center;
+}
+
+/*Main H1s*/
+main h1{
+    grid-column: 1 / span 2;
+    height: 50px;
+    padding:20px 0 0 0;
+    margin: 0;
+    font-size:30px;
+    background-color:#1a0e0e;
+    text-align:center;
+    color:white;
+}
+
+/*Cartel de Articulos*/
+main article
+{
+    margin:5% 0;
+    justify-content: center;
+    text-align:center;
+    color:white;
+
+}
+
+/*Articulos Imagen*/
+main article img
+{
+    cursor:pointer;
+    height: 70%;
+    width: 70%;
+    object-fit:cover;
+    object-position:top center;
+    display: block;
+    margin-left: auto;  
+    margin-right: auto;
+}
+
+/*Cursor sobre imagen*/
+main article img:hover
+{
+    transition: .25s;
+    transform: scale(1.02);
+    box-shadow: 1px 1px 20px #1a0e0e;
+}
+
+/*Categoria Articulo*/
+main article h2
+{
+    text-shadow: 2px 2px 2px #1a0e0e;
+}
+
+/*Barra decorativa*/
+main article hr{
+    margin: 1% 5%;
+}
+
+/*Section*/
+main section
+{
+    display: grid;
+    grid-template-columns: 65% 35%;
+    grid-template-rows: 30% 70%;
+    margin: 0 0 50px 0;
+    grid-column: 1 / span 3;
+    background-color: #1a0e0e;
+    height: 300px;
+    width: 80%;
+    justify-self: center;
+    box-shadow: 1px 1px 10px #1a0e0e ;
+}
+
+
+/*Titulo Section*/
+section h1{
+    color: #fff;
+    text-align: start;
+    margin: 3% 5%;
+    font-size:50px;
+    font-weight:bolder;
+    grid-row: 1;
+}
+section p{
+    background-color: #1a0e0e;
+    color: #fff;
+    text-align: start;
+    margin: 3% 5%;
+    font-size:20px;
+    grid-row: 2;
+}
+
+section img
+{
+    grid-column: 2;
+    grid-row: 1 / span 2;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position:left;
+}
+
+
+
+/*-------------------Footer*/
+.Footer{
+
+    padding: 3%;
+    color: #fff;
+    font-size: 10px;
+    display: grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+    grid-template-rows: 90% 10%;
+    background-color:#1a0e0e;
+    height:300px;
+}
+
+/*Footer Contactos*/
+footer div
+{
+    display: grid;
+    height: 150px;
+    grid-template-rows: auto;
+}
+
+footer div h1
+{
+    margin-top: 0;
+    font-size: 15px;
+}
+
+footer div a
+{
+    margin: 2% 0;
+    color: gray;
+}
+footer div a:hover
+{
+    transition: .25s;
+    cursor:pointer;
+    color: #fff;
+}
+
+.Footer_Iconos
+{
+    margin: 0;    
+    display:grid;
+    grid-template-rows: 70% 30%;
+}
+
+.Footer_Logo
+{
+    margin: 10% auto 0 auto;
+    height: auto;
+    width: 60%;
+    object-fit:fill;
+    object-position:center;
+    align-self:center;
+}
+.Footer_Redes
+{
+    margin-top: 5px;
+    display:grid;
+    grid-template-columns: 20% 20% 20% 20% 20%;
+}
+
+.Footer_Redes > img{
+    padding: 0 12%;
+    margin: 5%;
+    height: auto;
+    width: 40%;
+    object-fit:fill;
+    object-position:center;
+    align-self:center;
+}
+.Footer_Redes >img:hover
+{
+    transition: .25s;
+    cursor: pointer;
+    transform: scale(1.2);
+}
+
+.CR
+{
+    font-size: 12px;
+    margin: 2% 0;
+    grid-column: 1/span 2;
+    color: #f3f2f2;
+}
+footer hr
+{
+    margin: 2% 0;
+    grid-column: 1/span 5;
+}
+
+
+/*--------------Main Registro-------------*/
+.Registro
+{
+    background-image: url("Assets/Registro/Registro_Fondo.jpg");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size:cover;
+    background-attachment: fixed;
+}
+
+.Registro_Main
+{
+    background-color: white;
+    display: grid;
+    grid-template-columns: 40% 60%;
+    grid-template-rows: 100%;
+    margin:10% 15% 3% 15%;
+    height: auto;
+    box-shadow: 1px 1px 20px #1a0e0e;
+}
+
+/*Imagen Izquierda*/
+.Registro_Main > img
+{
+    grid-column: 1;
+    grid-row: 1 / span 2;
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    object-position:left;
+}
+
+/*Informaciòn para registrar*/
+.Recuadro_Log_Reg
+{
+    grid-column: 2;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: auto;
+    padding: 5%;
+}
+
+/*Menu superior*/
+.Opciones > ul
+{
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+
+.Iniciar_Sesion a
+{
+    color: #1a0e0e;
+}
+.Iniciar_Sesion a:hover
+{
+    text-decoration: underline;
+}
+
+.Registrarse a
+{
+    color: #1a0e0e;
+}
+.registrarse a:hover
+{
+    text-decoration: underline;
+}
+/*------------------Datos Registrar-----------------------*/
+
+.Datos
+{
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-row: auto;
+}
+
+.Datos div
+{
+    margin-bottom: 5%;
+}
+
+.Datos div > input:first-of-type
+{
+    height: 35px;
+    width: 100%;
+}
+
+/*------------------Datos Iniiciar sesion-----------------------*/
+
+.Datos_LogIn
+{
+    padding: 0;
+    margin: 0;
+    display: grid;
+    grid-template-columns: 50% 50%;
+    grid-row: auto;
+}
+
+.Datos_LogIn div
+{
+    margin-bottom: 5%;
+}
+
+.Datos_LogIn div > input:first-of-type
+{
+    height: 35px;
+    width: 100%;
+}
+
+/*---------------Padding individual de los datos-------*/
+.Datos_Nombre
+{
+    padding-right: 10%;
+}
+.Datos_Apellido
+{
+    padding-right: 10%;
+}
+.Datos_Correo
+{
+    padding-right: 5%;
+    grid-column: 1 / span 2;
+}
+.Datos_Contraseña
+{
+    padding-right: 10%;
+}
+.Datos_Conf_Contraseña
+{
+    padding-right: 10%;
+}
+
+.Datos_Contraseña_LogIn
+{
+    padding-right: 5%;
+    grid-column: 1 / span 2;
+}
+
+
+/*Boton Registro*/
+.Datos_RegisBoton
+{
+    margin: auto;
+    grid-column: 1 / span 2;
+}
+.Datos_RegisBoton button
+{
+    margin-top: 10%;
+    height: 50px;
+    width: 120%;
+    background: #1a0e0e;
+}
+.Datos_RegisBoton span
+{
+    color: #fff;
+
+}
+.Datos_RegisBoton button:hover
+{
+    cursor: pointer;
+    transition:all .4s ease-in-out;
+    background: rgb(70, 68, 68);
+    color: #fff;
+}
+
+.Registrar_Redes
+{
+    margin: auto;
+    grid-column: 1/span 2;
+}
+
+.Registrar_Redes img
+{
+    margin: 3%;
+    height: 50px;
+}
+
+/*------------------------------Carrito--------------*/
+.Main_Carrito
+{
+    background-color:#f3f2f2;
+    display: grid;
+    grid-template-columns: 70% 30%;
+    grid-template-rows: 100%;
+    margin:7% 0 0 0;
+    height: 70%;
+
+}
+
+.Carrito_Compras
+{
+    display: flex;
+    flex-direction: column;
+    padding:4%;
+    overflow:auto;
+}
+
+/*Recuadro de información de los productos--------------------*/
+.Carrito_Producto
+{
+    height: 35%;
+    display: grid;
+    grid-template-columns: 20% 2% 78%;
+    background-color: #fff;
+
+}
+
+.Carrito_Img
+{
+    margin: auto;
+    height: 70%;
+    width: 70%;
+    object-fit:cover;
+    object-position:top center;
+    display: block;
+}
+.Carrito_DatosProducto
+{
+    padding-top: 2%;
+    padding-bottom: 2%;
+    grid-column: 3;
+}
+
+.Carrito_DatosProducto > h2,p
+{
+    color: rgb(36, 39, 43);
+}
+
+.Carrito_DatosProducto > a
+{
+    color: rgb(0, 110, 255);
+}
+.Carrito_DatosProducto > a:hover
+{
+    text-decoration: underline;
+}
+
+.Carrito_DatosProducto > hr
+{
+    margin-right: 10%;
+}
+
+
+/*Comprar recuadro Total----------------------------*/
+.Carrito_InfoCompra
+{
+    display: grid;
+    grid-template-rows: 20% 5% 15% 60%;
+    width: 80%;
+    color: #1a0e0e;
+    background-color: #fff;
+    box-shadow: 1px 1px 20px #1a0e0e;
+    margin-right: 10%;
+
+}
+
+.Carrito_InfoCompra > h2
+{
+    color: rgb(71, 72, 75);
+    margin: auto;
+    font-size: 25px;
+}
+.Carrito_InfoCompra > div
+{
+    margin: auto;
+    padding: 5%;
+    align-items: center;
+    display: grid;
+    grid-template-columns: 50% 50%;
+}
+
+.Carrito_InfoCompra hr
+{
+    height: .5px;
+    margin: 1% 0%;
+}
+
+.Carrito_InfoCompra > button
+{
+    align-self:flex-end;
+
+    margin: 10% auto;
+
+    height: 20%;
+    width: 80%;
+    background: #1a0e0e;
+    color: #fff;
+}
+
+.Carrito_InfoCompra > button:hover
+{
+    cursor: pointer;
+    transition:all .4s ease-in-out;
+    background: rgb(70, 68, 68);
+    color: #fff;
+}
+
+.Total_Pagar > h2,span
+{
+    color: rgb(71, 72, 75);
+    font-size: 20px;
+}
+
+
+/*Producto------------------------------------------*/
+
+.Producto
+{
+    background-color: #f3f2f2;
+}
+
+.Producto_CompraRecuadro
+{
+    padding: 3%;
+    background-color: #fff;
+    margin: 10%;
+    display: grid;
+    grid-template-columns: 5% 60% 35%;
+    grid-template-rows: 100%;
+    box-shadow: 1px 1px 20px #1a0e0e;
+    border-radius: 2%;
+}
+
+/*Imagenes de preview del producto*/
+.Producto_ImagenesVistazo 
+{
+    grid-column: 1;
+   
+}
+
+.Producto_ImagenesVistazo img
+{
+    margin-left: auto;
+    margin-right: auto;
+    margin-bottom: 5%;
+    height:70px;
+    width: 100%;
+    object-fit:contain;
+    object-position:center;
+    display: block;
+    border:1px solid rgb(163, 159, 159);
+    border-radius: 5%;
+    
+}
+
+.Producto_ImagenesVistazo img:hover
+{
+    cursor: pointer;
+    border:2px solid rgb(0, 110, 255);
+}
+
+/*Imagen en grande del producto.-------*/
+.Producto_ImagenPrinc > img
+{
+    grid-column: 2;
+    margin: auto;
+    height: 90%;
+    width: 90%;
+    object-fit:cover;
+    object-position:top center;
+    display: block;
+    border-bottom: 1px solid rgb(163, 159, 159);;
+}
+/*Datos de compra del producto*/
+
+.Producto_InfoCompra
+{
+    padding: 5%;
+    border: 1px solid rgb(163, 159, 159);
+    border-radius: 2%;
+
+}
+.Producto_InfoCompra a
+{
+    color:rgb(0, 110, 255);
+}
+
+.DatosCompra
+{
+    margin-top: 5%;
+    margin-bottom: 5%;
+
+    color:rgb(0, 146, 78)
+}
+
+.Producto_InfoCompra h2
+{
+    font-size: x-large;
+    font-weight:lighter;
+}
+
+
+.Producto_InfoCompra button
+{
+    margin: 10%;
+    height: 10%;
+    width: 80%;
+    background: #1a0e0e;
+    color: #fff;
+}
+
+.Producto_InfoCompra > button:hover
+{
+    cursor: pointer;
+    transition:all .4s ease-in-out;
+    background: rgb(70, 68, 68);
+    color: #fff;
+}
+
+
+/*Cuenta Conifguración---------------*/
+
+.Cuenta_Main
+{
+    background-image: url("Assets/Registro/Registro_Fondo.jpg");
+    background-repeat: no-repeat;
+    background-position:center;
+    background-size:cover;
+    background-attachment: fixed;
+    padding: 10% 15% 5% 15%;
+}
+
+.Cuenta_Recuadro
+{
+    background-color: #fff;
+    padding: 3%;
+    border: 1px solid rgb(24, 9, 9);
+    border-radius: 1%;
+    box-shadow:1px 1px 20px #1a0e0e;
+}
+/*Encabezado Cuenta------------*/
+.Cuenta_Encabezado
+{
+    display: grid;
+    grid-template-columns: 20% 80%;
+    padding-bottom: 2%;
+    border-bottom: 1px solid rgb(24, 9, 9);
+
+}
+
+.Cuenta_Encabezado img
+{
+    grid-column: 1;
+    margin: auto;
+    height: 100%;
+    width: 50%;
+    object-fit:cover;
+    object-position:top center;
+    display: block;
+
+}
+
+.Cuenta_Main input:first-of-type
+{
+    margin-bottom: 2%;
+    width: 100%;
+}
+
+.Cuenta_Datos
+{
+    display: grid;
+    grid-template-columns: 48% 4% 48%;
+}
+
+.Cuenta_Dato2
+{
+    grid-column:3;
+}
+
+.Cuenta_Acerca:first-of-type
+{
+    height: 100px;
+    text-align:justify;
+}
+
+.Cuenta_Main button
+{
+    margin: 5%;
+    height: 50px;
+    width: 30%;
+    background: #1a0e0e;
+    color: #fff;
+}
+
+.Cuenta_Main button:hover
+{
+    cursor: pointer;
+    transition:all .4s ease-in-out;
+    background: rgb(70, 68, 68);
+    color: #fff;
+}
+
+.Cuenta_Main > button:hover
+{
+    cursor: pointer;
+    transition:all .4s ease-in-out;
+    background: rgb(70, 68, 68);
+    color: #fff;
+}
+
+/*Lista Productos-------------------*/
+
+.Guantes_Main
+{
+    padding: 10% 3% 5% 3%;
+    display: grid;
+    grid-template-columns: 20% 80%;
+}
+
+.Guantes_Main a{
+    font-weight: 1000;
+    text-decoration: none;
+    color: black;
+}
+
+.Guantes_Main a:hover{
+
+    cursor: pointer;
+    color: rgb(138, 138, 138);
+}
+
+.Guantes_Main li
+{
+    margin: 5% 0%;
+    text-decoration: none;
+    color: transparent;
+}
+.Guantes_Main h3
+{
+    text-decoration: none;
+    color: black;
+}
+.Guantes_Main h4
+{
+    text-decoration: none;
+    color: black;
+}
+
+
+.Guante_BarraBusqueda
+{
+    grid-row: 2;
+}
+
+.Guantes_Productos
+{
+    grid-column: 2;
+    grid-row: 2;
+}
+
+.Guantes_Guantes ol{
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.Guantes_Guantes li
+{
+    padding: 1%;
+    margin: 1%;
+    flex: 1 1 25%;
+    height: 450px;
+    border: 1px solid rgb(112, 112, 112);
+}
+
+.Guantes_Guantes img 
+{
+    margin: auto;
+    height: 50%;
+    width: 100%;
+    object-fit:contain;
+    object-position:center;
+    display: block;
+}
+
+.Guantes_Guantes img:hover
+{
+    transform: scale(1.1);
+    transition: .5s;
+}
+
+.Guantes_Guantes button
+{
+    margin-top: 100%;
+    margin: 0%;
+    width: 100%;
+    background: #1a0e0e;
+    color: #fff;
+}
+
+.Guantes_Guantes button:hover{
+    cursor: pointer;
+    transition:all .4s ease-in-out;
+    background: rgb(70, 68, 68);
+    color: #fff;
+}
+
+.Productos_encabezado
+{
+    display: grid;
+    padding-left: 3%;
+    grid-template-columns: 15% 15% 70%;
+    text-align: center;
+}
+
+.Productos_encabezado > h2 
+{
+    font-size: large;
+    margin: auto;
+    grid-column: 1;    
+}
+
+.Productos_encabezado > p 
+{
+    color: #8b8b8b;
+    margin-left: 0;
+    margin-top: auto;
+    margin-bottom: auto;
+    grid-column: 2;    
+}
